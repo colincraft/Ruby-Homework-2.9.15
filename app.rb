@@ -2,6 +2,7 @@ require 'sinatra'
 require 'sinatra/reloader'
 require './greeter'
 require "better_errors"
+also_reload './greeter.rb'
 configure :development do
   use BetterErrors::Middleware
   BetterErrors.application_root = __dir__
